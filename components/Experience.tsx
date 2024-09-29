@@ -47,7 +47,7 @@ const content = [
   },
   {
     title: "Technical Co-ordinator",
-    company: "TCET",
+    company: "Thakur College of Engineering & Technology",
     dates: "01/2023 - 06/2024",
     description:
       "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",

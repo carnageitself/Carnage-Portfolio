@@ -11,7 +11,6 @@ import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 
 export function Wobble() {
-
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -39,7 +38,7 @@ export function Wobble() {
     },
     {
       id: "5",
-      name: "Advance database & Management Systems",
+      name: "Advance Database & Management Systems",
     },
     {
       id: "6",
@@ -71,27 +70,26 @@ export function Wobble() {
   ];
 
   return (
-    
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
-       <WobbleCard
+      <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
         className=""
       >
         <></>
       </WobbleCard>
-      
+
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
         <BackgroundGradientAnimation>
-         <div className="text-center flex items-center w-full h-full absolute justify-center flex-col z-40">
-          <h1 className="text-3xl font-bold">Hi, I'm Yash !</h1>
+          <div className="text-center flex items-center w-full h-full absolute justify-center flex-col z-40">
+            <h1 className="text-3xl font-bold">Hi, I'm Yash !</h1>
             <MagicButton
-                title={copied ? "My Resume!" : "My Resume!"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
-              />
-         </div>
+              title={copied ? "My Resume!" : "My Resume!"}
+              icon={<IoCopyOutline />}
+              position="left"
+              handleClick={handleCopy}
+              otherClasses="!bg-[#161A31]"
+            />
+          </div>
         </BackgroundGradientAnimation>
       </WobbleCard>
       {/* <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
@@ -104,11 +102,16 @@ export function Wobble() {
         containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
         className=""
       >
-         <MaskContainer
+        <MaskContainer
           revealText={
             <div className="max-w-4xl mx-10 text-slate-800 text-center flex flex-col gap-3">
-              <h1 className="text-4xl font-bold"><span className="text-5xl text-red-600 tracking-tight">N</span>ortheastern University</h1>
-              <h1 className="text-md">Master of Science in Data Analytics Engineering</h1>
+              <h1 className="text-4xl font-bold">
+                <span className="text-5xl text-red-600 tracking-tight">N</span>
+                ortheastern University
+              </h1>
+              <h1 className="text-md">
+                Master of Science in Data Analytics Engineering
+              </h1>
               <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-5">
                 {courses2.map((item) => (
                   <div
@@ -122,20 +125,22 @@ export function Wobble() {
             </div>
           }
         >
-           <div className="max-w-4xl mx-10 text-white text-center flex flex-col gap-3">
-              <h1 className="text-4xl font-bold">Mumbai University</h1>
-              <h1 className="text-md">Bachelor of Engineering in Electronics Engineering</h1>
-              <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-5">
-                {courses1.map((item) => (
-                  <div
-                    className="p-2 bg-white/10 text-white text-[12px] rounded-lg"
-                    key={item.id}
-                  >
-                    {item.name}
-                  </div>
-                ))}
-              </div>
+          <div className="max-w-4xl mx-10 text-white text-center flex flex-col gap-3">
+            <h1 className="text-4xl font-bold">Mumbai University</h1>
+            <h1 className="text-md">
+              Bachelor of Engineering in Electronics Engineering
+            </h1>
+            <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-5">
+              {courses1.map((item) => (
+                <div
+                  className="p-2 bg-white/10 text-white text-[12px] rounded-lg"
+                  key={item.id}
+                >
+                  {item.name}
+                </div>
+              ))}
             </div>
+          </div>
         </MaskContainer>
       </WobbleCard>
     </div>

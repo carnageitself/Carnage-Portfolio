@@ -8,6 +8,7 @@ import Image from "next/image";
 import { AnimatedTooltip } from "./ui/Tooltip";
 import { LinkPreview } from "./ui/LinkPreview";
 import { TextHoverEffect } from "./ui/TextHoverEffect";
+import github from "@/public/github.png";
 
 const RecentProjects = () => {
   const icons = [
@@ -60,14 +61,26 @@ const RecentProjects = () => {
             <div key={item.id}>
               <CardContainer className="inter-var" key={item.id}>
                 <CardBody className="relative group/card bg-black w-auto sm:w-[30rem] h-auto rounded-xl p-6 border border-white/20 shadow-card ">
-                  <CardItem translateZ="100" className="w-full">
+                  <CardItem translateZ="100" className="w-full relative">
                     <Image
                       src={item.img}
                       width="1000"
                       height="1000"
-                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                      className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl "
                       alt="image not found :("
                     />
+                    <div className="absolute inset-0 flex justify-end m-3">
+                      <div
+                        onClick={() => window.open(item.link, "_blank")}
+                        className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                      >
+                        <Image
+                          src={github}
+                          alt="source code"
+                          className="w-1/2 h-1/2 object-contain"
+                        />
+                      </div>
+                    </div>
                   </CardItem>
                   <CardItem
                     translateZ="50"

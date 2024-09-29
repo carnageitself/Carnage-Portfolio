@@ -3,8 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { PinContainer } from "./Pin";
-import { ContainerScroll } from "./ContainerScroll";
 import { TextGenerateEffect } from "./TextGenerateEffect";
 
 export const StickyScroll = ({
@@ -23,8 +21,6 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
     container: ref,
     offset: ["start start", "end start"],
   });
@@ -65,13 +61,16 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-around relative space-x-10 rounded-md p-10 w-full"
+      className="h-[30rem] overflow-y-auto flex justify-between relative space-x-10 rounded-md w-full"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl">
+      {/* Left side containing all the details (70% width) */}
+      <div className="relative flex flex-col items-start w-[60%] px-4">
+        <div className="w-full">
+          {" "}
+          {/* Updated: Removed max-width to use full space */}
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="mt-28 mb-32">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -94,7 +93,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-300 max-w-sm mt-10"
+                className="text-lg text-slate-300 w-full mt-10"
               >
                 <TextGenerateEffect
                   words={item.description}
@@ -105,14 +104,14 @@ export const StickyScroll = ({
         </div>
       </div>
 
-      <div
-        style={{ background: backgroundGradient }}
-        className={cn(
-          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
-          contentClassName
-        )}
-      >
-        {content[activeCard].content ?? null}
+      {/* Right side containing the gradient (30% width) */}
+      <div className="h-full w-[40%] sticky top-0 overflow-hidden hidden lg:flex items-center justify-center">
+        <div
+          style={{ background: backgroundGradient }}
+          className={cn(" h-80 w-96 rounded-md bg-white", contentClassName)}
+        >
+          {content[activeCard].content ?? null}
+        </div>
       </div>
     </motion.div>
   );

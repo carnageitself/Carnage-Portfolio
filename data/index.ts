@@ -134,6 +134,7 @@ export const projects = [
     img: "/p1.svg",
     iconLists: icons,
     link: "/ui.earth.com",
+    github: "https://github.com/carnageitself",
   },
   {
     id: 2,
@@ -142,6 +143,7 @@ export const projects = [
     img: "/p2.svg",
     iconLists: icons,
     link: "/ui.yoom.com",
+    github: "https://github.com/carnageitself",
   },
   {
     id: 3,
@@ -150,6 +152,7 @@ export const projects = [
     img: "/p3.svg",
     iconLists: icons,
     link: "/ui.aiimg.com",
+    github: "https://github.com/carnageitself",
   },
   {
     id: 4,
@@ -158,6 +161,7 @@ export const projects = [
     img: "/p4.svg",
     iconLists: icons,
     link: "/ui.apple.com",
+    github: "https://github.com/carnageitself",
   },
 ];
 

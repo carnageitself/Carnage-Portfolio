@@ -13,6 +13,7 @@ import { projects } from "@/data";
 import { CardBody, CardContainer, CardItem } from "./ThreeDCard";
 import { AnimatedTooltip } from "./Tooltip";
 import { LinkPreview } from "./LinkPreview";
+import github from "@/public/github.png";
 
 export const HeroParallax = ({}) => {
   const ref = React.useRef(null);
@@ -80,6 +81,18 @@ export const HeroParallax = ({}) => {
                       className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                       alt="image not found :("
                     />
+                    <div className="absolute inset-0 flex justify-end m-2">
+                      <div
+                        onClick={() => window.open(item.github, "_blank")}
+                        className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                      >
+                        <Image
+                          src={github}
+                          alt="source code"
+                          className="w-full h-full p-1 object-contain"
+                        />
+                      </div>
+                    </div>
                   </CardItem>
                   <CardItem
                     translateZ="50"
@@ -134,6 +147,18 @@ export const HeroParallax = ({}) => {
                       className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                       alt="image not found :("
                     />
+                    <div className="absolute inset-0 flex justify-end m-2">
+                      <div
+                        onClick={() => window.open(item.github, "_blank")}
+                        className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                      >
+                        <Image
+                          src={github}
+                          alt="source code"
+                          className="w-full h-full p-1 object-contain"
+                        />
+                      </div>
+                    </div>
                   </CardItem>
                   <CardItem
                     translateZ="50"
@@ -188,6 +213,18 @@ export const HeroParallax = ({}) => {
                       className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                       alt="image not found :("
                     />
+                    <div className="absolute inset-0 flex justify-end m-2">
+                      <div
+                        onClick={() => window.open(item.github, "_blank")}
+                        className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                      >
+                        <Image
+                          src={github}
+                          alt="source code"
+                          className="w-full h-full p-1 object-contain"
+                        />
+                      </div>
+                    </div>
                   </CardItem>
                   <CardItem
                     translateZ="50"
