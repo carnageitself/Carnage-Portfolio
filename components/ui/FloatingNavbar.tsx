@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { FloatingDock } from "@/components/ui/FloatingDock";
 import { AiOutlineHome } from "react-icons/ai";
 import { SiAlchemy } from "react-icons/si";
-
+import { SiExpertsexchange } from "react-icons/si";
 import { SiBmcsoftware } from "react-icons/si";
 
 import { SiInformatica } from "react-icons/si";
@@ -40,7 +40,14 @@ const links = [
     href: "#projects",
   },
   {
-    title: "Testimonials",
+    title: "Experience",
+    icon: (
+      <SiExpertsexchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+    ),
+    href: "#experience",
+  },
+  {
+    title: "Me",
     icon: (
       <SiAlchemy className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),

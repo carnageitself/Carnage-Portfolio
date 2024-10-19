@@ -9,7 +9,6 @@ import { FaGithub } from "react-icons/fa";
 import { BiLinkAlt } from "react-icons/bi";
 import { LinkPreview } from "./ui/LinkPreview";
 
-
 const Footer = () => {
   const currentyear = new Date().getFullYear();
 
@@ -47,25 +46,34 @@ const Footer = () => {
         </p>
 
         <div className="flex items-center md:gap-3 gap-6 py-10">
-        <LinkPreview url="https://github.com/carnageitself">
-          <a href="https://github.com/carnageitself" className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-            <FaGithub />
-          </a>
+          <LinkPreview url="https://github.com/carnageitself">
+            <a
+              href="https://github.com/carnageitself"
+              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+            >
+              <FaGithub />
+            </a>
           </LinkPreview>
           <LinkPreview url="https://linktr.ee/carnageitself">
-          <a href="https://linktr.ee/carnageitself" className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-            <BiLinkAlt />
-          </a>
+            <a
+              href="https://linktr.ee/carnageitself"
+              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+            >
+              <BiLinkAlt />
+            </a>
           </LinkPreview>
           <LinkPreview url="https://www.linkedin.com/in/yash-harale">
-          <a href="https://www.linkedin.com/in/yash-harale" className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300">
-            <FaLinkedin />
-          </a>
+            <a
+              href="https://www.linkedin.com/in/yash-harale"
+              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+            >
+              <FaLinkedin />
+            </a>
           </LinkPreview>
         </div>
       </div>
     </footer>
-  );  
+  );
 };
 
 export default Footer;

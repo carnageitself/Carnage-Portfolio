@@ -1,14 +1,16 @@
 "use client";
-import Image from "next/image";
 import React, { useState } from "react";
 import { WobbleCard } from "@/components/ui/WobbleCard";
-import { Compare } from "./ui/Compare";
-import { Comparision } from "./Comparision";
 import { BackgroundGradientAnimation } from "./ui/GradientBg";
 import { CardSpot } from "./CardSpotlight";
 import { MaskContainer } from "./ui/MaskEffect";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+import {
+  TextRevealCard,
+  TextRevealCardDescription,
+  TextRevealCardTitle,
+} from "./ui/TextRevealCard";
 
 export function Wobble() {
   const [copied, setCopied] = useState(false);
@@ -65,22 +67,25 @@ export function Wobble() {
     },
     {
       id: "4",
-      name: "Computation & Visualisation for Analytics",
+      name: "Computational Visualisation for Analytics",
     },
   ];
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px]"
         className=""
       >
-        <></>
+        <TextRevealCard
+          text="You know the business"
+          revealText="I know the chemistry "
+        ></TextRevealCard>
       </WobbleCard>
 
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
         <BackgroundGradientAnimation>
-          <div className="text-center flex items-center w-full h-full absolute justify-center flex-col z-40">
+          {/* <div className="text-center flex items-center w-full h-full absolute justify-center flex-col z-40">
             <h1 className="text-3xl font-bold">Hi, I'm Yash !</h1>
             <MagicButton
               title={copied ? "My Resume!" : "My Resume!"}
@@ -89,7 +94,7 @@ export function Wobble() {
               handleClick={handleCopy}
               otherClasses="!bg-[#161A31]"
             />
-          </div>
+          </div> */}
         </BackgroundGradientAnimation>
       </WobbleCard>
       {/* <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
@@ -99,7 +104,7 @@ export function Wobble() {
         <CardSpot />
       </WobbleCard>
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full bg-pink-800 min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-2 h-full  min-h-[500px] lg:min-h-[300px]"
         className=""
       >
         <MaskContainer

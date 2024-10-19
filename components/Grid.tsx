@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React from "react";
+import React, { Suspense, useState } from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
 import {
   IconBoxAlignRightFilled,
@@ -11,6 +11,10 @@ import {
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { CardPack } from "./CardPack";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import YashModel from "./ui/YashModel";
 
 export function Bento() {
   return (
@@ -155,84 +159,91 @@ const SkeletonThree = () => {
   );
 };
 const SkeletonFour = () => {
-  const first = {
-    initial: {
-      x: 20,
-      rotate: -5,
+  const [animationName, setAnimationName] = useState("idle");
+
+  const actions = [
+    {
+      id: "1",
+      icon: <IconSignature />,
+      animation: "victory",
     },
-    hover: {
-      x: 0,
-      rotate: 0,
+    {
+      id: "2",
+      icon: <IconSignature />,
+      animation: "clapping",
     },
-  };
-  const second = {
-    initial: {
-      x: -20,
-      rotate: 5,
+    {
+      id: "3",
+      icon: <IconSignature />,
+      animation: "salute",
     },
-    hover: {
-      x: 0,
-      rotate: 0,
+    {
+      id: "4",
+      icon: <IconSignature />,
+      animation: "victory",
     },
-  };
+    {
+      id: "5",
+      icon: <IconSignature />,
+      animation: "victory",
+    },
+    {
+      id: "6",
+      icon: <IconSignature />,
+      animation: "victory",
+    },
+    {
+      id: "7",
+      icon: <IconSignature />,
+      animation: "victory",
+    },
+    {
+      id: "8",
+      icon: <IconSignature />,
+      animation: "victory",
+    },
+    {
+      id: "9",
+      icon: <IconSignature />,
+      animation: "victory",
+    },
+  ];
+
   return (
     <motion.div
+      className="flex flex-1 justify-between items-center w-full h-full min-h-[6rem]"
       initial="initial"
-      animate="animate"
-      whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
+      whileHover="animate"
     >
-      <motion.div
-        variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-      >
-        <Image
-          src=""
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Just code in Vanilla Javascript
-        </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Delusional
-        </p>
-      </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-        <Image
-          src=""
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          Tailwind CSS is cool, you know
-        </p>
-        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Sensible
-        </p>
-      </motion.div>
-      <motion.div
-        variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
-      >
-        <Image
-          src=""
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-          I love angular, RSC, and Redux.
-        </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-          Helpless
-        </p>
-      </motion.div>
+      <div className="w-[70%] h-full">
+        <Canvas>
+          <ambientLight intensity={7} />
+          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+          <directionalLight position={[10, 10, 10]} intensity={1} />
+          <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
+
+          <Suspense>
+            <YashModel
+              position-y={-3}
+              scale={3}
+              animationName={animationName}
+            />
+          </Suspense>
+        </Canvas>
+      </div>
+      <div className="w-[30%] h-full items-center justify-center gap-5 grid grid-cols-3">
+        {actions.map((item, index) => (
+          <div
+            key={item.id}
+            className="bg-white/10 rounded-full w-14 h-14 flex items-center justify-center "
+            onClick={() => setAnimationName(item.animation)}
+            onPointerOver={() => setAnimationName(item.animation)}
+            onPointerOut={() => setAnimationName("idle")}
+          >
+            {item.icon}
+          </div>
+        ))}
+      </div>
     </motion.div>
   );
 };
@@ -266,31 +277,9 @@ const SkeletonFive = () => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2 pt-5"
     >
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
-      >
-        <Image
-          src=""
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="text-xs text-neutral-500">
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
-      </motion.div>
-      <motion.div
-        variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
-      >
-        <p className="text-xs text-neutral-500">Use PHP.</p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-      </motion.div>
+      <CardPack />
     </motion.div>
   );
 };
@@ -341,7 +330,7 @@ const items = [
   },
 
   {
-    title: "Text Summarization",
+    title: "Testimonials",
     description: (
       <span className="text-sm">
         Summarize your lengthy documents with AI technology.
