@@ -4,6 +4,7 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "./TextGenerateEffect";
+import { PinContainer } from "./Pin";
 
 export const StickyScroll = ({
   content,
@@ -106,12 +107,14 @@ export const StickyScroll = ({
 
       {/* Right side containing the gradient (30% width) */}
       <div className="h-full w-[40%] sticky top-0 overflow-hidden hidden lg:flex items-center justify-center">
-        <div
-          style={{ background: backgroundGradient }}
-          className={cn(" h-80 w-96 rounded-md bg-white", contentClassName)}
-        >
-          {content[activeCard].content ?? null}
-        </div>
+        <PinContainer title="">
+          <div
+            style={{ background: backgroundGradient }}
+            className={cn(" h-80 w-96 rounded-md bg-white", contentClassName)}
+          >
+            {content[activeCard].content ?? null}
+          </div>
+        </PinContainer>
       </div>
     </motion.div>
   );
