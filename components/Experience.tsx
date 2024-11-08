@@ -7,10 +7,24 @@ import { DirectionAwareHover } from "./ui/DirectionAware";
 const content = [
   {
     title: "Chief Technology Officer",
-    company: "Sartha Education",
-    dates: "08/2023 - 12/2023",
-    description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    company: "Five Line Healthcare",
+    dates: "02/2024 - 05/2024",
+    description: (
+      <div className="">
+        <li>
+          Provided technical leadership to ensure platform scalability, backend
+          efficiency, and alignment with business goals.
+        </li>
+        <li>
+          Advised the team on website optimization with advanced caching, API
+          integration, and microservices.
+        </li>
+        <li>
+          Streamlined client-doctor matching through automated workflows and
+          secure data protocols to improve healthcare access.
+        </li>
+      </div>
+    ),
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         Collaborative Editing
@@ -22,10 +36,24 @@ const content = [
   },
   {
     title: "Chief Technology Officer",
-    company: "Five Line Healthcare",
-    dates: "02/2024 - 06/2024",
-    description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    company: "Sartha Education",
+    dates: "08/2023 - 12/2023",
+    description: (
+      <div className="">
+        <li>
+          Integrated software solutions to link students with expert teachers
+          and top ranked students.
+        </li>
+        <li>
+          Designed and developed a user-friendly website using modern web
+          frameworks such as Next.JS and MERN Stack.
+        </li>
+        <li>
+          Enhanced Sartha Education's online presence by 40%, broadening
+          audience reach.
+        </li>
+      </div>
+    ),
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white"></div>
     ),
@@ -36,9 +64,20 @@ const content = [
   {
     title: "Technical Co-ordinator",
     company: "Thakur College of Engineering & Technology",
-    dates: "01/2023 - 06/2024",
-    description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    dates: "08/2023 - 06/2024",
+    description: (
+      <div className="">
+        <li>
+          Collaborated with the college’s technical teams to identify and
+          address software development needs, contributing to infrastructure
+          improvements and enhancing project outcomes by 30%.
+        </li>
+        <li>
+          Advised students on coding skills and innovative technologies like AI,
+          DS, and AIML, preparing them for competitive careers.
+        </li>
+      </div>
+    ),
     content: (
       <div className="h-full w-full flex items-center justify-center text-white">
         Running out of content

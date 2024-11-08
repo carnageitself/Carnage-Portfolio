@@ -14,7 +14,7 @@ export const StickyScroll = ({
     title: string;
     company: string;
     dates: string;
-    description: string;
+    description: React.ReactNode | any;
     content?: React.ReactNode | any;
   }[];
   contentClassName?: string;
@@ -96,9 +96,7 @@ export const StickyScroll = ({
                 }}
                 className="text-lg text-slate-300 w-full mt-10"
               >
-                <TextGenerateEffect
-                  words={item.description}
-                ></TextGenerateEffect>
+                {item.description}
               </motion.p>
             </div>
           ))}
