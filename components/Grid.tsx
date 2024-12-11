@@ -15,6 +15,7 @@ import { CardPack } from "./CardPack";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import YashModel from "./ui/YashModel";
+import { WorldMap } from "./ui/WorldMap";
 
 export function Bento() {
   return (
@@ -159,94 +160,52 @@ const SkeletonThree = () => {
   );
 };
 const SkeletonFour = () => {
-  const [animationName, setAnimationName] = useState("idle");
-
-  const actions = [
-    {
-      id: "1",
-      icon: <IconSignature />,
-      animation: "victory",
-    },
-    {
-      id: "2",
-      icon: <IconSignature />,
-      animation: "clapping",
-    },
-    {
-      id: "3",
-      icon: <IconSignature />,
-      animation: "salute",
-    },
-    {
-      id: "4",
-      icon: <IconSignature />,
-      animation: "victory",
-    },
-    {
-      id: "5",
-      icon: <IconSignature />,
-      animation: "victory",
-    },
-    {
-      id: "6",
-      icon: <IconSignature />,
-      animation: "victory",
-    },
-    {
-      id: "7",
-      icon: <IconSignature />,
-      animation: "victory",
-    },
-    {
-      id: "8",
-      icon: <IconSignature />,
-      animation: "victory",
-    },
-    {
-      id: "9",
-      icon: <IconSignature />,
-      animation: "victory",
-    },
-  ];
-
   return (
     <motion.div
-      className="flex flex-1 justify-between items-center w-full h-full min-h-[6rem]"
+      className="flex flex-1 justify-between items-center w-full h-full min-h-[6rem] relative"
       initial="initial"
       whileHover="animate"
     >
-      <div className="w-[70%] h-full">
-        <Canvas>
-          <ambientLight intensity={7} />
-          <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-          <directionalLight position={[10, 10, 10]} intensity={1} />
-          <OrbitControls enableZoom={false} maxPolarAngle={Math.PI / 2} />
-
-          <Suspense>
-            <YashModel
-              position-y={-3}
-              scale={3}
-              animationName={animationName}
-            />
-          </Suspense>
-        </Canvas>
-      </div>
-      <div className="w-[30%] h-full items-center justify-center gap-5 grid grid-cols-3">
-        {actions.map((item, index) => (
-          <div
-            key={item.id}
-            className="bg-white/10 rounded-full w-14 h-14 flex items-center justify-center "
-            onClick={() => setAnimationName(item.animation)}
-            onPointerOver={() => setAnimationName(item.animation)}
-            onPointerOut={() => setAnimationName("idle")}
-          >
-            {item.icon}
-          </div>
-        ))}
+      <div className="w-full h-full flex justify-center items-center relative overflow-hidden">
+        <WorldMap
+          dots={[
+            {
+              start: {
+                lat: 64.2008,
+                lng: -149.4937,
+              }, // Alaska (Fairbanks)
+              end: {
+                lat: 34.0522,
+                lng: -118.2437,
+              }, // Los Angeles
+            },
+            {
+              start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
+              end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+            },
+            {
+              start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
+              end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
+            },
+            {
+              start: { lat: 51.5074, lng: -0.1278 }, // London
+              end: { lat: 28.6139, lng: 77.209 }, // New Delhi
+            },
+            {
+              start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+              end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
+            },
+            {
+              start: { lat: 28.6139, lng: 77.209 }, // New Delhi
+              end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
+            },
+          ]}
+        />
       </div>
     </motion.div>
   );
 };
+
 const SkeletonFive = () => {
   const variants = {
     initial: {
