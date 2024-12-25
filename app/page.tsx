@@ -22,7 +22,6 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Wobble />
-
         <HeroParallax />
         {/* <RecentProjects /> */}
         <Experience />

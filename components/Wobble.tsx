@@ -11,6 +11,8 @@ import {
   TextRevealCardDescription,
   TextRevealCardTitle,
 } from "./ui/TextRevealCard";
+import Image from "next/image";
+import profilepic from "@/public/yasshhh.jpg";
 
 export function Wobble() {
   const [copied, setCopied] = useState(false);
@@ -84,7 +86,7 @@ export function Wobble() {
       </WobbleCard>
 
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <BackgroundGradientAnimation>
+        {/* <BackgroundGradientAnimation>
           {/* <div className="text-center flex items-center w-full h-full absolute justify-center flex-col z-40">
             <h1 className="text-3xl font-bold">Hi, I'm Yash !</h1>
             <MagicButton
@@ -94,8 +96,13 @@ export function Wobble() {
               handleClick={handleCopy}
               otherClasses="!bg-[#161A31]"
             />
-          </div> */}
-        </BackgroundGradientAnimation>
+          </div>
+        </BackgroundGradientAnimation> */}
+        <Image
+          src={profilepic}
+          alt=""
+          className="object-cover w-full h-full absolute overflow-hidden top-0 left-0"
+        />
       </WobbleCard>
       {/* <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <></>
