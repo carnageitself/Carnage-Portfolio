@@ -90,7 +90,7 @@ const content = [
 ];
 export function Experience() {
   return (
-    <div className="">
+    <div className="" id="experience">
       <h1 className="heading">
         My <span className="text-purple">Experience</span>
       </h1>

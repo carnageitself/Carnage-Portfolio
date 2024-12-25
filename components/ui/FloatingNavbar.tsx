@@ -12,7 +12,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { SiAlchemy } from "react-icons/si";
 import { SiExpertsexchange } from "react-icons/si";
 import { SiBmcsoftware } from "react-icons/si";
-
+import { MdConnectWithoutContact } from "react-icons/md";
 import { SiInformatica } from "react-icons/si";
 import { FaSlideshare } from "react-icons/fa";
 
