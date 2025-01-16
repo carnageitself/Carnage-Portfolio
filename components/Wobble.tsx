@@ -83,8 +83,8 @@ export function Wobble() {
         className=""
       >
         <TextRevealCard
-          text="You know the business"
-          revealText="I know the chemistry "
+          text="You bring the problem"
+          revealText="I craft the solution"
         ></TextRevealCard>
       </WobbleCard>
 

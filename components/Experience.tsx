@@ -3,6 +3,8 @@ import React from "react";
 import { StickyScroll } from "@/components/ui/StickyScroll";
 import Image from "next/image";
 import { DirectionAwareHover } from "./ui/DirectionAware";
+import pic from "@/public/NEU.png";
+import sartha from "@/public/sartha.jpeg";
 
 const content = [
   {
@@ -26,9 +28,11 @@ const content = [
       </div>
     ),
     content: (
-      <div className="h-full w-full  flex items-center justify-center text-white">
-        Collaborative Editing
-      </div>
+      <Image
+        src={pic}
+        alt=""
+        className="object-cover w-full h-full absolute overflow-hidden top-0 left-0"
+      />
     ),
     companyName: "sartha.in",
     companyLink: "",
@@ -55,7 +59,11 @@ const content = [
       </div>
     ),
     content: (
-      <div className="h-full w-full  flex items-center justify-center text-white"></div>
+      <Image
+        src={sartha}
+        alt=""
+        className="object-cover w-full h-full absolute overflow-hidden top-0 left-0"
+      />
     ),
     companyName: "",
     companyLink: "",

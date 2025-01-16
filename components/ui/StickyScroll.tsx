@@ -16,6 +16,9 @@ export const StickyScroll = ({
     dates: string;
     description: React.ReactNode | any;
     content?: React.ReactNode | any;
+    companyName: string;
+    companyLink: string;
+    companyLogo: string;
   }[];
   contentClassName?: string;
 }) => {
@@ -105,7 +108,7 @@ export const StickyScroll = ({
 
       {/* Right side containing the gradient (30% width) */}
       <div className="h-full w-[40%] sticky top-0 overflow-hidden hidden lg:flex items-center justify-center">
-        <PinContainer title="">
+        <PinContainer>
           <div
             style={{ background: backgroundGradient }}
             className={cn(" h-80 w-96 rounded-md bg-white", contentClassName)}
