@@ -74,7 +74,7 @@ export const StickyScroll = ({
           {" "}
           {/* Updated: Removed max-width to use full space */}
           {content.map((item, index) => (
-            <div key={item.title + index} className="mt-28 mb-32">
+            <div key={item.title + index} className="mt-5 mb-14 lg:my-28">
               <motion.h2
                 initial={{
                   opacity: 0,

@@ -130,10 +130,10 @@ export function Wobble() {
                 <span className="text-5xl text-red-600 tracking-tight">N</span>
                 ortheastern University
               </h1>
-              <h1 className="text-md">
+              <h1 className="text-md mt-2 lg:mt-0">
                 Master of Science in Data Analytics Engineering
               </h1>
-              <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-5">
+              <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-10 lg:mt-5">
                 {courses2.map((item) => (
                   <div
                     className="p-2 bg-black/10 text-black text-[12px] rounded-lg"
