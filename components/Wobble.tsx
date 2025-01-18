@@ -125,7 +125,7 @@ export function Wobble() {
       >
         <MaskContainer
           revealText={
-            <div className="max-w-4xl mx-10 text-slate-800 text-center flex flex-col gap-3">
+            <div className="max-w-4xl mx-10 text-black text-center flex flex-col gap-3">
               <h1 className="text-4xl font-bold">
                 <span className="text-5xl text-red-600 tracking-tight">N</span>
                 ortheastern University
