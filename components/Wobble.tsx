@@ -13,6 +13,7 @@ import {
 } from "./ui/TextRevealCard";
 import Image from "next/image";
 import profilepic from "@/public/yasshhh.jpg";
+import { Vortex } from "./ui/Vortex";
 
 export function Wobble() {
   const [copied, setCopied] = useState(false);
@@ -82,10 +83,15 @@ export function Wobble() {
         containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px]"
         className=""
       >
-        <TextRevealCard
-          text="You bring the problem"
-          revealText="I craft the solution"
-        ></TextRevealCard>
+        <Vortex
+          backgroundColor="black"
+          className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+        >
+          <TextRevealCard
+            text="You bring the problem"
+            revealText="I craft the solution"
+          ></TextRevealCard>
+        </Vortex>
       </WobbleCard>
 
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">

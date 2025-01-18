@@ -69,7 +69,7 @@ export const StickyScroll = ({
       ref={ref}
     >
       {/* Left side containing all the details (70% width) */}
-      <div className="relative flex flex-col items-start w-[60%] px-4">
+      <div className="relative flex flex-col items-start lg:w-[60%] w-full px-4">
         <div className="w-full">
           {" "}
           {/* Updated: Removed max-width to use full space */}
