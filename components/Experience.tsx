@@ -3,8 +3,9 @@ import React from "react";
 import { StickyScroll } from "@/components/ui/StickyScroll";
 import Image from "next/image";
 import { DirectionAwareHover } from "./ui/DirectionAware";
-import pic from "@/public/NEU.png";
-import sartha from "@/public/sartha.jpeg";
+import ayurgrid from "@/public/ayurgrid.png";
+import sartha from "@/public/sartha.png";
+import tcet from "@/public/tcet.png";
 
 const content = [
   {
@@ -29,9 +30,9 @@ const content = [
     ),
     content: (
       <Image
-        src={pic}
+        src={ayurgrid}
         alt=""
-        className="object-cover w-full h-full absolute overflow-hidden top-0 left-0"
+        className="object-contain w-full h-full absolute overflow-hidden top-0 left-0"
       />
     ),
     companyName: "sartha.in",
@@ -62,7 +63,7 @@ const content = [
       <Image
         src={sartha}
         alt=""
-        className="object-cover w-full h-full absolute overflow-hidden top-0 left-0"
+        className="object-contain w-full h-full absolute overflow-hidden top-0 left-0"
       />
     ),
     companyName: "",
@@ -87,9 +88,11 @@ const content = [
       </div>
     ),
     content: (
-      <div className="h-full w-full flex items-center justify-center text-white">
-        Running out of content
-      </div>
+      <Image
+        src={tcet}
+        alt=""
+        className="object-contain w-full h-full absolute overflow-hidden top-0 left-0"
+      />
     ),
     companyName: "",
     companyLink: "",
