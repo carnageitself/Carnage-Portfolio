@@ -16,6 +16,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import YashModel from "./ui/YashModel";
 import { WorldMap } from "./ui/WorldMap";
+import { AnimatedTestimonials } from "./ui/AnimatedTestimonial";
+import xd from "@/public/NEU.png";
 
 export function Bento() {
   return (
@@ -155,17 +157,6 @@ const SkeletonThree = () => {
         backgroundSize: "400% 400%",
       }}
     >
-      <motion.div className="h-full w-full rounded-lg"></motion.div>
-    </motion.div>
-  );
-};
-const SkeletonFour = () => {
-  return (
-    <motion.div
-      className="flex flex-1 justify-between items-center w-full h-full min-h-[6rem] relative"
-      initial="initial"
-      whileHover="animate"
-    >
       <WorldMap
         dots={[
           {
@@ -200,6 +191,98 @@ const SkeletonFour = () => {
           },
         ]}
       />
+    </motion.div>
+  );
+};
+const SkeletonFour = () => {
+  const testimonials = [
+    {
+      work: "",
+      company: "Fnatic Esports",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Villagers Esports",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Nodwin Gaming",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Upthrust Esports",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Thakur College of Engineering and Technology",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Samsung",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "MOJ India",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Upthrust Esports",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Outplay NGO",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Orange Rock",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Team Insane",
+      designation: "",
+      src: "/NEU.png",
+    },
+    {
+      work: "",
+      company: "Stalwart Esports",
+      designation: "",
+      src: "/NEU.png",
+    },
+  ];
+
+  return (
+    <motion.div
+      className="flex flex-1 w-full h-full min-h-[6rem]"
+      initial="initial"
+      whileHover="animate"
+    >
+      <AnimatedTestimonials testimonials={testimonials} />
     </motion.div>
   );
 };
@@ -264,7 +347,7 @@ const items = [
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Contextual Suggestions",
+    title: "Global Flexibility",
     description: (
       <span className="text-sm">
         Get AI-powered suggestions based on your writing context.
@@ -275,7 +358,7 @@ const items = [
     icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Sentiment Analysis",
+    title: "Extra Curricular Activities",
     description: (
       <span className="text-sm">
         Understand the sentiment of your text with AI analysis.

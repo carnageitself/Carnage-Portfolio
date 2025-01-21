@@ -110,8 +110,8 @@ export const StickyScroll = ({
       <div className="h-full w-[40%] sticky top-0 overflow-hidden hidden lg:flex items-center justify-center">
         <PinContainer>
           <div
-            style={{ background: backgroundGradient }}
-            className={cn(" h-80 w-96 rounded-md bg-white", contentClassName)}
+            style={{ background: "black" }}
+            className={cn(" h-80 w-96 rounded-md", contentClassName)}
           >
             {content[activeCard].content ?? null}
           </div>

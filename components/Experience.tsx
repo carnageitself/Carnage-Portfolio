@@ -35,8 +35,8 @@ const content = [
         className="object-contain w-full h-full absolute overflow-hidden top-0 left-0"
       />
     ),
-    companyName: "sartha.in",
-    companyLink: "",
+    companyName: "",
+    companyLink: "https://www.ayurgrid.com",
     companyLogo: "",
   },
   {
@@ -67,7 +67,7 @@ const content = [
       />
     ),
     companyName: "",
-    companyLink: "",
+    companyLink: "https://www.sartha.in",
     companyLogo: "",
   },
   {
@@ -95,7 +95,7 @@ const content = [
       />
     ),
     companyName: "",
-    companyLink: "",
+    companyLink: "https://www.tcetmumbai.in",
     companyLogo: "",
   },
 ];
