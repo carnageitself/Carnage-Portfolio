@@ -105,7 +105,7 @@ export function Experience() {
       <h1 className="heading">
         My <span className="text-purple">Experience</span>
       </h1>
-      <div className="mt-20">
+      <div className="mt-20 mx-10">
         <StickyScroll content={content} />
       </div>
     </div>

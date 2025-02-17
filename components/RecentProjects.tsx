@@ -11,45 +11,6 @@ import { TextHoverEffect } from "./ui/TextHoverEffect";
 import github from "@/public/github.png";
 
 const RecentProjects = () => {
-  const icons = [
-    {
-      id: 1,
-      name: "John Doe",
-      designation: "Software Engineer",
-      image: "/tail.svg",
-    },
-    {
-      id: 2,
-      name: "Robert Johnson",
-      designation: "Product Manager",
-      image: "/ts.svg",
-    },
-    {
-      id: 3,
-      name: "Jane Smith",
-      designation: "Data Scientist",
-      image: "/next.svg",
-    },
-    {
-      id: 4,
-      name: "Emily Davis",
-      designation: "UX Designer",
-      image: "/three.svg",
-    },
-    {
-      id: 5,
-      name: "Tyler Durden",
-      designation: "Soap Developer",
-      image: "/re.svg",
-    },
-    {
-      id: 6,
-      name: "Dora",
-      designation: "The Explorer",
-      image: "/gsap.svg",
-    },
-  ];
-
   return (
     <div className="projects h-full">
       <div className="py-24">

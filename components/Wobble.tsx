@@ -86,42 +86,40 @@ export function Wobble() {
   };
 
   return (
-    <div
-      className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full"
-      id="about"
-    >
-      <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px] bg-gradient-to-br from-slate-800 dark:from-neutral-900 to-gray-900"
-        className=""
-      >
-        <div className="noise absolute inset-0 w-full h-full opacity-10 bg-noise fade-vignette [mask-image:radial-gradient(#fff,transparent,75%)]"></div>
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 select-none overflow-hidden rounded-2xl"
-          style={{
-            mask: `radial-gradient(33.875rem 33.875rem at calc(100% - 8.9375rem) 0, white 3%, transparent 70%)`,
-          }}
-        ></div>
-        {/* <Vortex
+    <div className="mx-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full" id="about">
+        <WobbleCard
+          containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px] bg-gradient-to-br from-slate-800 dark:from-neutral-900 to-gray-900"
+          className=""
+        >
+          <div className="noise absolute inset-0 w-full h-full opacity-10 bg-noise fade-vignette [mask-image:radial-gradient(#fff,transparent,75%)]"></div>
+          <div
+            className="pointer-events-none absolute inset-y-0 right-0 select-none overflow-hidden rounded-2xl"
+            style={{
+              mask: `radial-gradient(33.875rem 33.875rem at calc(100% - 8.9375rem) 0, white 3%, transparent 70%)`,
+            }}
+          ></div>
+          {/* <Vortex
           backgroundColor="black"
           className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
         > */}
-        {/* <TextRevealCard
+          {/* <TextRevealCard
             text="You highlight the need"
             revealText="I provide the solution"
           ></TextRevealCard> */}
-        {/* <TextRevealCard
+          {/* <TextRevealCard
             text="Highlight your need"
             revealText="I'll work on the solution"
           ></TextRevealCard> */}
-        <TextRevealCard
-          text="Just bring in your needs"
-          revealText="I'll provide the solution"
-        ></TextRevealCard>
-        {/* </Vortex> */}
-      </WobbleCard>
+          <TextRevealCard
+            text="Just bring in your needs"
+            revealText="I'll provide the solution"
+          ></TextRevealCard>
+          {/* </Vortex> */}
+        </WobbleCard>
 
-      <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        {/* <BackgroundGradientAnimation>
+        <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+          {/* <BackgroundGradientAnimation>
           {/* <div className="text-center flex items-center w-full h-full absolute justify-center flex-col z-40">
             <h1 className="text-3xl font-bold">Hi, I'm Yash !</h1>
             <MagicButton
@@ -133,45 +131,65 @@ export function Wobble() {
             />
           </div>
         </BackgroundGradientAnimation> */}
-        <GridGlobe />
-      </WobbleCard>
-      {/* <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+          <GridGlobe />
+        </WobbleCard>
+        {/* <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <></>
       </WobbleCard> */}
-      <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <BackgroundGradientAnimation>
-          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl flex-col">
-            <h1 className="text-3xl font-bold">
-              Do you want to start a project together?
-            </h1>
-            <MagicButton
-              title={copied ? "Resume Downloaded!" : "My Resume!"}
-              icon={<IoCopyOutline />}
-              position="left"
-              handleClick={handleCopy}
-              otherClasses="!bg-[#161A31]"
-            />
-          </div>
-        </BackgroundGradientAnimation>
-      </WobbleCard>
-      <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full  min-h-[500px] lg:min-h-[300px]"
-        className=""
-      >
-        <MaskContainer
-          revealText={
-            <div className="max-w-4xl mx-10 text-black text-center flex flex-col gap-3">
-              <h1 className="text-4xl font-bold">
-                <span className="text-5xl text-red-600 tracking-tight">N</span>
-                ortheastern University
+        <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+          <BackgroundGradientAnimation>
+            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl flex-col">
+              <h1 className="text-3xl font-bold">
+                Do you want to start a project together?
               </h1>
-              <h1 className="text-md mt-2 lg:mt-0">
-                Master of Science in Data Analytics Engineering
+              <MagicButton
+                title={copied ? "Resume Downloaded!" : "My Resume!"}
+                icon={<IoCopyOutline />}
+                position="left"
+                handleClick={handleCopy}
+                otherClasses="!bg-[#161A31]"
+              />
+            </div>
+          </BackgroundGradientAnimation>
+        </WobbleCard>
+        <WobbleCard
+          containerClassName="col-span-1 lg:col-span-2 h-full  min-h-[500px] lg:min-h-[300px]"
+          className=""
+        >
+          <MaskContainer
+            revealText={
+              <div className="max-w-4xl mx-10 text-black text-center flex flex-col gap-3">
+                <h1 className="text-4xl font-bold">
+                  <span className="text-5xl text-red-600 tracking-tight">
+                    N
+                  </span>
+                  ortheastern University
+                </h1>
+                <h1 className="text-md mt-2 lg:mt-0">
+                  Master of Science in Data Analytics Engineering
+                </h1>
+                <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-10 lg:mt-5">
+                  {courses2.map((item) => (
+                    <div
+                      className="p-2 bg-black/10 text-black text-[12px] rounded-lg"
+                      key={item.id}
+                    >
+                      {item.name}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            }
+          >
+            <div className="max-w-4xl mx-10 text-white text-center flex flex-col gap-3">
+              <h1 className="text-4xl font-bold">Mumbai University</h1>
+              <h1 className="text-md">
+                Bachelor of Engineering in Electronics Engineering
               </h1>
-              <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-10 lg:mt-5">
-                {courses2.map((item) => (
+              <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-5">
+                {courses1.map((item) => (
                   <div
-                    className="p-2 bg-black/10 text-black text-[12px] rounded-lg"
+                    className="p-2 bg-white/10 text-white text-[12px] rounded-lg"
                     key={item.id}
                   >
                     {item.name}
@@ -179,26 +197,9 @@ export function Wobble() {
                 ))}
               </div>
             </div>
-          }
-        >
-          <div className="max-w-4xl mx-10 text-white text-center flex flex-col gap-3">
-            <h1 className="text-4xl font-bold">Mumbai University</h1>
-            <h1 className="text-md">
-              Bachelor of Engineering in Electronics Engineering
-            </h1>
-            <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-5">
-              {courses1.map((item) => (
-                <div
-                  className="p-2 bg-white/10 text-white text-[12px] rounded-lg"
-                  key={item.id}
-                >
-                  {item.name}
-                </div>
-              ))}
-            </div>
-          </div>
-        </MaskContainer>
-      </WobbleCard>
+          </MaskContainer>
+        </WobbleCard>
+      </div>
     </div>
   );
 }
