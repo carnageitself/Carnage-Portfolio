@@ -14,16 +14,10 @@ import {
 import Image from "next/image";
 import profilepic from "@/public/yasshhh.jpg";
 import { Vortex } from "./ui/Vortex";
+import animationData from "@/data/confetti.json";
+import { GridGlobe } from "./ui/GridGlobe";
 
 export function Wobble() {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-  };
-
   const courses1 = [
     {
       id: "1",
@@ -74,24 +68,56 @@ export function Wobble() {
     },
   ];
 
+  const [copied, setCopied] = useState(false);
+
+  const defaultOptions = {
+    loop: copied,
+    autoplay: copied,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const handleCopy = () => {
+    const text = "hsu@jsmastery.pro";
+    navigator.clipboard.writeText(text);
+    setCopied(true);
+  };
+
   return (
     <div
       className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full"
       id="about"
     >
       <WobbleCard
-        containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px]"
+        containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px] bg-gradient-to-br from-slate-800 dark:from-neutral-900 to-gray-900"
         className=""
       >
-        <Vortex
+        <div className="noise absolute inset-0 w-full h-full opacity-10 bg-noise fade-vignette [mask-image:radial-gradient(#fff,transparent,75%)]"></div>
+        <div
+          className="pointer-events-none absolute inset-y-0 right-0 select-none overflow-hidden rounded-2xl"
+          style={{
+            mask: `radial-gradient(33.875rem 33.875rem at calc(100% - 8.9375rem) 0, white 3%, transparent 70%)`,
+          }}
+        ></div>
+        {/* <Vortex
           backgroundColor="black"
           className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
-        >
-          <TextRevealCard
-            text="You bring the problem"
-            revealText="I craft the solution"
-          ></TextRevealCard>
-        </Vortex>
+        > */}
+        {/* <TextRevealCard
+            text="You highlight the need"
+            revealText="I provide the solution"
+          ></TextRevealCard> */}
+        {/* <TextRevealCard
+            text="Highlight your need"
+            revealText="I'll work on the solution"
+          ></TextRevealCard> */}
+        <TextRevealCard
+          text="Just bring in your needs"
+          revealText="I'll provide the solution"
+        ></TextRevealCard>
+        {/* </Vortex> */}
       </WobbleCard>
 
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
@@ -107,17 +133,26 @@ export function Wobble() {
             />
           </div>
         </BackgroundGradientAnimation> */}
-        <Image
-          src={profilepic}
-          alt=""
-          className="object-cover w-full h-full absolute overflow-hidden top-0 left-0"
-        />
+        <GridGlobe />
       </WobbleCard>
       {/* <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <></>
       </WobbleCard> */}
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <CardSpot />
+        <BackgroundGradientAnimation>
+          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl flex-col">
+            <h1 className="text-3xl font-bold">
+              Do you want to start a project together?
+            </h1>
+            <MagicButton
+              title={copied ? "Resume Downloaded!" : "My Resume!"}
+              icon={<IoCopyOutline />}
+              position="left"
+              handleClick={handleCopy}
+              otherClasses="!bg-[#161A31]"
+            />
+          </div>
+        </BackgroundGradientAnimation>
       </WobbleCard>
       <WobbleCard
         containerClassName="col-span-1 lg:col-span-2 h-full  min-h-[500px] lg:min-h-[300px]"

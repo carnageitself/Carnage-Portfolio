@@ -6,7 +6,7 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import { FlipWords } from "./ui/FlipWords";
 
 const Hero = () => {
-  const words = ["Entrepreneur", "Data Analyst", "Software Engineer"];
+  const words = ["Data Analyst", "Software Engineer"];
 
   return (
     <div className="pb-20 pt-36">
@@ -14,17 +14,8 @@ const Hero = () => {
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
        */}
-      <div>
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="purple"
-        />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
-      </div>
+
+      <Spotlight />
 
       {/**
        *  UI: grid
@@ -46,7 +37,7 @@ const Hero = () => {
       <div className="flex justify-center relative my-20 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
           <p className="uppercase tracking-widest text-sm text-center text-blue-100 max-w-80">
-            Welcome to my Portfolio
+            Welcome to my professional journey
           </p>
 
           {/**
@@ -55,7 +46,7 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Transforming Dreams into Seamless User Experiences"
+            words="Transforming your desires into profound possibilities"
             className="text-center text-[40px] md:text-5xl lg:text-6xl my-10 lg:my-0"
           />
 

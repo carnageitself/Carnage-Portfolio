@@ -274,6 +274,12 @@ const SkeletonFour = () => {
       designation: "",
       src: "/NEU.png",
     },
+    {
+      work: "",
+      company: "Rotaract District 3141",
+      designation: "",
+      src: "/NEU.png",
+    },
   ];
 
   return (

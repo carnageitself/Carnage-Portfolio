@@ -8,37 +8,37 @@ import sartha from "@/public/sartha.png";
 import tcet from "@/public/tcet.png";
 
 const content = [
-  {
-    title: "Chief Technology Officer",
-    company: "Five Line Healthcare",
-    dates: "02/2024 - 05/2024",
-    description: (
-      <div className="">
-        <li>
-          Provided technical leadership to ensure platform scalability, backend
-          efficiency, and alignment with business goals.
-        </li>
-        <li>
-          Advised the team on website optimization with advanced caching, API
-          integration, and microservices.
-        </li>
-        <li>
-          Streamlined client-doctor matching through automated workflows and
-          secure data protocols to improve healthcare access.
-        </li>
-      </div>
-    ),
-    content: (
-      <Image
-        src={ayurgrid}
-        alt=""
-        className="object-contain w-full h-full absolute overflow-hidden top-0 left-0"
-      />
-    ),
-    companyName: "",
-    companyLink: "https://www.ayurgrid.com",
-    companyLogo: "",
-  },
+  // {
+  //   title: "Chief Technology Officer",
+  //   company: "Five Line Healthcare",
+  //   dates: "02/2024 - 05/2024",
+  //   description: (
+  //     <div className="">
+  //       <li>
+  //         Provided technical leadership to ensure platform scalability, backend
+  //         efficiency, and alignment with business goals.
+  //       </li>
+  //       <li>
+  //         Advised the team on website optimization with advanced caching, API
+  //         integration, and microservices.
+  //       </li>
+  //       <li>
+  //         Streamlined client-doctor matching through automated workflows and
+  //         secure data protocols to improve healthcare access.
+  //       </li>
+  //     </div>
+  //   ),
+  //   content: (
+  //     <Image
+  //       src={ayurgrid}
+  //       alt=""
+  //       className="object-contain w-full h-full absolute overflow-hidden top-0 left-0"
+  //     />
+  //   ),
+  //   companyName: "",
+  //   companyLink: "https://www.ayurgrid.com",
+  //   companyLogo: "",
+  // },
   {
     title: "Chief Technology Officer",
     company: "Sartha Education",

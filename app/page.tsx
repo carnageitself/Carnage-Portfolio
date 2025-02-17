@@ -14,6 +14,7 @@ import { ContainerScroll } from "@/components/ui/ContainerScroll";
 import { Wobble } from "@/components/Wobble";
 import { HeroParallax } from "@/components/ui/Parallax";
 import { Bento } from "@/components/Grid";
+import { Glowing } from "@/components/Glowing";
 
 const Home = () => {
   return (
@@ -26,7 +27,7 @@ const Home = () => {
         {/* <RecentProjects /> */}
         <Experience />
         <Techstack />
-        <Bento />
+        <Glowing />
         {/* <Approach /> */}
         <Footer />
       </div>
