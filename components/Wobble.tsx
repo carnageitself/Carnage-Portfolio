@@ -90,7 +90,7 @@ export function Wobble() {
     <div className="mx-10">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full" id="about">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px] bg-gradient-to-br from-slate-800 dark:from-neutral-900 to-gray-900"
+          containerClassName="col-span-1 lg:col-span-2 h-full min-h-[500px] lg:min-h-[300px] bg-clip- bg-gradient-to-b from-neutral-900 via-black to-black"
           className=""
         >
           <div className="noise absolute inset-0 w-full h-full opacity-10 bg-noise fade-vignette [mask-image:radial-gradient(#fff,transparent,75%)]"></div>
@@ -132,7 +132,7 @@ export function Wobble() {
             />
           </div>
         </BackgroundGradientAnimation> */}
-          <h1 className="text-xl md:text-4xl font-bold text-white text-center py-6">
+          <h1 className="text-xl md:text-4xl font-bold text-white text-center py-8">
             I'm versatile with time zone communications
           </h1>
           <GridGlobe />
@@ -145,7 +145,7 @@ export function Wobble() {
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl flex-col">
               <h1 className="text-3xl font-bold">
-                Do you want to start a project together?
+                Let’s collaborate and bring your ideas to life!
               </h1>
               <MagicButton
                 title={copied ? "Resume Downloaded!" : "My Resume!"}
