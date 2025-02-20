@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { Meteors } from "./Meteors";
 
 const World = dynamic(() => import("./Globe").then((m) => m.World), {
   ssr: false,
@@ -395,7 +396,7 @@ export function GridGlobe() {
   ];
 
   return (
-    <div className="flex items-center justify-center absolute -left-5 top-36 md:top-40 w-full h-full">
+    <div className="flex items-center justify-center absolute -left-5 top-24 md:top-36 w-full h-full">
       {/* remove h-full md:h-[40rem] */}
       <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-96 px-4">
         {/* remove these text divs */}
@@ -413,9 +414,9 @@ export function GridGlobe() {
           }}
           className="div"
         >
-          <h2 className="absolute text-xl md:text-4xl font-bold text-white text-center">
+          {/* <h2 className="absolute text-xl md:text-4xl font-bold text-white text-center">
             I'm very flexible with time zone communications
-          </h2>
+          </h2> */}
           {/* <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
             This globe is interactive and customizable. Have fun with it, and
             don&apos;t forget to share it.

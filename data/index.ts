@@ -163,6 +163,24 @@ export const projects = [
     link: "/ui.apple.com",
     github: "https://github.com/carnageitself",
   },
+  {
+    id: 5,
+    title: "Animated Apple Iphone 3D Website",
+    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    img: "/p4.svg",
+    iconLists: icons,
+    link: "/ui.apple.com",
+    github: "https://github.com/carnageitself",
+  },
+  {
+    id: 6,
+    title: "Animated Apple Iphone 3D Website",
+    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
+    img: "/p4.svg",
+    iconLists: icons,
+    link: "/ui.apple.com",
+    github: "https://github.com/carnageitself",
+  },
 ];
 
 export const testimonials = [

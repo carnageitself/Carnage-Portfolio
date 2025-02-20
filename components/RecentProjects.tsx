@@ -9,6 +9,7 @@ import { AnimatedTooltip } from "./ui/Tooltip";
 import { LinkPreview } from "./ui/LinkPreview";
 import { TextHoverEffect } from "./ui/TextHoverEffect";
 import github from "@/public/github.png";
+import { ColourfulText } from "./ui/ColorfulText";
 
 const RecentProjects = () => {
   return (
@@ -66,9 +67,7 @@ const RecentProjects = () => {
                     translateZ={60}
                     className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                   >
-                    <LinkPreview url="https://github.com/carnageitself">
-                      Live Preview
-                    </LinkPreview>
+                    <LinkPreview url={item.link}>Live Preview</LinkPreview>
                   </CardItem>
                 </div>
               </CardBody>

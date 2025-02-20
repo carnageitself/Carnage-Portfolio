@@ -14,12 +14,16 @@ import { CardBody, CardContainer, CardItem } from "./ThreeDCard";
 import { AnimatedTooltip } from "./Tooltip";
 import { LinkPreview } from "./LinkPreview";
 import github from "@/public/github.png";
+import { ColourfulText } from "./ColorfulText";
 
 export default function HeroParallax() {
   return (
     <div className="projects h-full">
       <div className="py-24">
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 mx-10">
+        <h1 className="heading">
+          <ColourfulText text="My Projects" />
+        </h1>
+        <div className="grid grid-cols-1 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8 mx-10">
           {projects.map((item) => (
             <div key={item.id}>
               <CardContainer className="inter-var">
@@ -71,9 +75,7 @@ export default function HeroParallax() {
                       translateZ={60}
                       className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                     >
-                      <LinkPreview url="https://github.com/carnageitself">
-                        Live Preview
-                      </LinkPreview>
+                      <LinkPreview url={item.link}>Live Preview</LinkPreview>
                     </CardItem>
                   </div>
                 </CardBody>

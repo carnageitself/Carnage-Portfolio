@@ -6,6 +6,7 @@ import { DirectionAwareHover } from "./ui/DirectionAware";
 import ayurgrid from "@/public/ayurgrid.png";
 import sartha from "@/public/sartha.png";
 import tcet from "@/public/tcet.png";
+import { ColourfulText } from "./ui/ColorfulText";
 
 const content = [
   // {
@@ -103,7 +104,7 @@ export function Experience() {
   return (
     <div className="" id="experience">
       <h1 className="heading">
-        My <span className="text-purple">Experience</span>
+        <ColourfulText text="My Experience" />
       </h1>
       <div className="mt-20 mx-10">
         <StickyScroll content={content} />

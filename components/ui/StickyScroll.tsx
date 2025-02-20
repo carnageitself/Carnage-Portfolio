@@ -65,16 +65,16 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-between relative space-x-10  w-full bg-gradient-to-br from-black via-neutral-900 to-black rounded-2xl"
+      className="h-[30rem] overflow-y-auto flex justify-between relative space-x-10  w-full rounded-2xl"
       ref={ref}
     >
-      <div className="noise absolute inset-0 w-full h-full opacity-10 bg-noise fade-vignette [mask-image:radial-gradient(#fff,transparent,75%)]"></div>
+      {/* <div className="noise absolute inset-0 w-full h-full opacity-10 bg-noise fade-vignette [mask-image:radial-gradient(#fff,transparent,75%)]"></div>
       <div
         className="pointer-events-none absolute inset-y-0 right-0 select-none overflow-hidden rounded-2xl"
         style={{
           mask: `radial-gradient(33.875rem 33.875rem at calc(100% - 8.9375rem) 0, white 3%, transparent 70%)`,
         }}
-      ></div>
+      ></div> */}
       {/* Left side containing all the details (70% width) */}
       <div className="relative flex flex-col items-start lg:w-[60%] w-full px-4">
         <div className="w-full">

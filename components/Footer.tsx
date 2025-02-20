@@ -24,14 +24,14 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="heading lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
+        <h1 className="heading lg:max-w-[45vw] bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 via-white to-white">
+          Ready to elevate <span className="text-purple">your</span> digital
           presence to the <Cover>next level?</Cover>
         </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
+        {/* <p className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
-        </p>
+        </p> */}
         <a href="mailto:harale.y@northeastern.edu">
           <MagicButton
             title="Let's get in touch"
@@ -41,7 +41,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
-        <p className="md:text-base text-sm md:font-normal font-light">
+        <p className="md:text-base text-sm md:font-normal font-light bg-clip-text text-transparent bg-gradient-to-b from-neutral-500 via-neutral-500 to-neutral-500 dark:from-neutral-800 dark:via-white dark:to-white">
           Copyright © {currentyear}
         </p>
 

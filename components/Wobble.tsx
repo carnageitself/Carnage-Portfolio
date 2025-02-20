@@ -16,6 +16,7 @@ import profilepic from "@/public/yasshhh.jpg";
 import { Vortex } from "./ui/Vortex";
 import animationData from "@/data/confetti.json";
 import { GridGlobe } from "./ui/GridGlobe";
+import { Meteors } from "./ui/Meteors";
 
 export function Wobble() {
   const courses1 = [
@@ -131,7 +132,11 @@ export function Wobble() {
             />
           </div>
         </BackgroundGradientAnimation> */}
+          <h1 className="text-xl md:text-4xl font-bold text-white text-center py-6">
+            I'm versatile with time zone communications
+          </h1>
           <GridGlobe />
+          <Meteors number={5} />
         </WobbleCard>
         {/* <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-blue-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <></>
