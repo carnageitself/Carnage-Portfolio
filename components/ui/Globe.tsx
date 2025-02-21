@@ -91,6 +91,13 @@ export function Globe({ globeConfig, data }: WorldProps) {
     ...globeConfig,
   };
 
+  useEffect(() => {
+    if (globeRef.current) {
+      _buildData();
+      _buildMaterial();
+    }
+  }, [globeRef.current]);
+
   const _buildMaterial = () => {
     if (!globeRef.current) return;
 
@@ -128,13 +135,6 @@ export function Globe({ globeConfig, data }: WorldProps) {
       });
     }
 
-    useEffect(() => {
-      if (globeRef.current) {
-        _buildData();
-        _buildMaterial();
-      }
-    }, [globeRef.current, _buildData, _buildMaterial]);
-
     // remove duplicates for same lat and lng
     const filteredPoints = points.filter(
       (v, i, a) =>
@@ -162,13 +162,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         });
       startAnimation();
     }
-  }, [
-    globeData,
-    defaultProps.atmosphereAltitude,
-    defaultProps.atmosphereColor,
-    defaultProps.showAtmosphere,
-    defaultProps.polygonColor,
-  ]);
+  }, [globeData]);
 
   const startAnimation = () => {
     if (!globeRef.current || !globeData) return;
@@ -227,7 +221,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     return () => {
       clearInterval(interval);
     };
-  }, [globeRef.current, globeData, data.length]);
+  }, [globeRef.current, globeData]);
 
   return (
     <>
@@ -243,7 +237,7 @@ export function WebGLRendererConfig() {
     gl.setPixelRatio(window.devicePixelRatio);
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
-  }, [gl, size.height, size.width]);
+  }, []);
 
   return null;
 }
