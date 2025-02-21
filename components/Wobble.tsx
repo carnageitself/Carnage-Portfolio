@@ -10,9 +10,6 @@ import {
   TextRevealCardDescription,
   TextRevealCardTitle,
 } from "./ui/TextRevealCard";
-import Image from "next/image";
-import profilepic from "@/public/yasshhh.jpg";
-import { Vortex } from "./ui/Vortex";
 import animationData from "@/data/confetti.json";
 import { GridGlobe } from "./ui/GridGlobe";
 import { Meteors } from "./ui/Meteors";
@@ -132,7 +129,7 @@ export function Wobble() {
           </div>
         </BackgroundGradientAnimation> */}
           <h1 className="text-xl md:text-4xl font-bold text-white text-center py-8">
-            I'm versatile with time zone communications
+            I&apos;m versatile with time zone communications
           </h1>
           <GridGlobe />
           <Meteors number={5} />

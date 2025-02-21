@@ -53,7 +53,7 @@ const content = [
           frameworks such as Next.JS and MERN Stack.
         </li>
         <li>
-          Enhanced Sartha Education's online presence by 40%, broadening
+          Enhanced Sartha Education&apos;s online presence by 40%, broadening
           audience reach.
         </li>
       </div>
