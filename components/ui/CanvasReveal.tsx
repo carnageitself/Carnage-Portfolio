@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import React, { useMemo, useRef } from "react";
+import React, { useCallback, useMemo, useRef } from "react";
 import * as THREE from "three";
 
 export const CanvasRevealEffect = ({
@@ -208,7 +208,7 @@ const ShaderMaterial = ({
     timeLocation.value = timestamp;
   });
 
-  const getUniforms = () => {
+  const getUniforms = useCallback(() => {
     const preparedUniforms: any = {};
 
     for (const uniformName in uniforms) {
@@ -250,11 +250,12 @@ const ShaderMaterial = ({
     preparedUniforms["u_time"] = { value: 0, type: "1f" };
     preparedUniforms["u_resolution"] = {
       value: new THREE.Vector2(size.width * 2, size.height * 2),
-    }; // Initialize u_resolution
-    return preparedUniforms;
-  };
+    };
 
-  // Shader material
+    return preparedUniforms;
+  }, [size.width, size.height, uniforms]); // ✅ Added dependencies to ensure stability
+
+  // Now pass getUniforms inside useMemo:
   const material = useMemo(() => {
     const materialObject = new THREE.ShaderMaterial({
       vertexShader: `
@@ -269,7 +270,7 @@ const ShaderMaterial = ({
         fragCoord = (position.xy + vec2(1.0)) * 0.5 * u_resolution;
         fragCoord.y = u_resolution.y - fragCoord.y;
       }
-      `,
+    `,
       fragmentShader: source,
       uniforms: getUniforms(),
       glslVersion: THREE.GLSL3,
@@ -279,7 +280,8 @@ const ShaderMaterial = ({
     });
 
     return materialObject;
-  }, [size.width, size.height, source]);
+  }, [size.width, size.height, source, getUniforms]); // ✅ Now includes getUniforms as a dependency
+  // Shader material
 
   return (
     <mesh ref={ref as any}>

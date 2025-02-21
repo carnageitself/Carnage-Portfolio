@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { WobbleCard } from "@/components/ui/WobbleCard";
 import { BackgroundGradientAnimation } from "./ui/GradientBg";
-import { CardSpot } from "./CardSpotlight";
 import { MaskContainer } from "./ui/MaskEffect";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
@@ -145,7 +144,7 @@ export function Wobble() {
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl flex-col">
               <h1 className="text-3xl font-bold">
-                Let’s collaborate and bring your ideas to life!
+                Let&apos;s collaborate and bring your ideas to life!
               </h1>
               <MagicButton
                 title={copied ? "Resume Downloaded!" : "My Resume!"}

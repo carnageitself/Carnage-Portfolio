@@ -8,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { BiLinkAlt } from "react-icons/bi";
 import { LinkPreview } from "./ui/LinkPreview";
+import Image from "next/image";
 
 const Footer = () => {
   const currentyear = new Date().getFullYear();
@@ -16,10 +17,12 @@ const Footer = () => {
     <footer className="w-full pt-20 pb-10" id="contact">
       {/* background grid */}
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
+        <Image
           src="/footer-grid.svg"
           alt="grid"
-          className="w-full h-full opacity-50 "
+          className="w-full h-full opacity-50"
+          width={1920}
+          height={980}
         />
       </div>
 

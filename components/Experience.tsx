@@ -2,8 +2,6 @@
 import React from "react";
 import { StickyScroll } from "@/components/ui/StickyScroll";
 import Image from "next/image";
-import { DirectionAwareHover } from "./ui/DirectionAware";
-import ayurgrid from "@/public/ayurgrid.png";
 import sartha from "@/public/sartha.png";
 import tcet from "@/public/tcet.png";
 import { ColourfulText } from "./ui/ColorfulText";
@@ -78,8 +76,8 @@ const content = [
     description: (
       <div className="">
         <li>
-          Collaborated with the college’s technical teams to identify and
-          address software development needs, contributing to infrastructure
+          Collaborated with the college technical teams to identify and address
+          software development needs, contributing to infrastructure
           improvements and enhancing project outcomes by 30%.
         </li>
         <li>
