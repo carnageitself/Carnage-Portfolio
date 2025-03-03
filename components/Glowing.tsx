@@ -2,112 +2,17 @@
 
 import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/GlowingEffect";
-import { ReactHTML } from "react";
+import Image from "next/image";
+import {
+  Backend,
+  Data,
+  Frontend,
+  ProgrammingLanguage,
+  projects,
+  Softwares,
+} from "@/data";
 
 export function Glowing() {
-  const Frontend = [
-    {
-      id: "1",
-      name: "Typescript",
-    },
-    {
-      id: "2",
-      name: "Javascript",
-    },
-    {
-      id: "3",
-      name: "SQL",
-    },
-    {
-      id: "4",
-      name: "Solidity",
-    },
-  ];
-
-  const Backend = [
-    {
-      id: "1",
-      name: "Next JS",
-    },
-    {
-      id: "2",
-      name: "React JS",
-    },
-    {
-      id: "3",
-      name: "Tailwind CSS",
-    },
-    {
-      id: "4",
-      name: "Bootstrap",
-    },
-    {
-      id: "5",
-      name: "Vite JS",
-    },
-    {
-      id: "6",
-      name: "Framer Motion",
-    },
-  ];
-
-  const Data = [
-    {
-      id: "1",
-      name: "Foundation of Data Analytics",
-    },
-    {
-      id: "2",
-      name: "Data Management for Analytics",
-    },
-    {
-      id: "3",
-      name: "Data Mining",
-    },
-    {
-      id: "4",
-      name: "Computational Visualisation for Analytics",
-    },
-  ];
-
-  const Softwares = [
-    {
-      id: "1",
-      name: "Foundation of Data Analytics",
-    },
-    {
-      id: "2",
-      name: "Data Management for Analytics",
-    },
-    {
-      id: "3",
-      name: "Data Mining",
-    },
-    {
-      id: "4",
-      name: "Computational Visualisation for Analytics",
-    },
-  ];
-
-  const ProgrammingLanguage = [
-    {
-      id: "1",
-      name: "Foundation of Data Analytics",
-    },
-    {
-      id: "2",
-      name: "Data Management for Analytics",
-    },
-    {
-      id: "3",
-      name: "Data Mining",
-    },
-    {
-      id: "4",
-      name: "Computational Visualisation for Analytics",
-    },
-  ];
-
   return (
     <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2 mx-10">
       <GridItem
@@ -161,13 +66,7 @@ interface GridItemProps {
   skills: { id: string; name: string }[];
 }
 
-const GridItem = ({
-  area,
-  icon,
-  title,
-  description,
-  skills,
-}: GridItemProps) => {
+const GridItem = ({ area, icon, title, skills }: GridItemProps) => {
   return (
     <li className={`min-h-[14rem] list-none ${area}`}>
       <div className="relative h-full rounded-2.5xl border p-2 md:rounded-3xl md:p-3">
@@ -193,9 +92,16 @@ const GridItem = ({
           <div className="flex flex-wrap justify-center gap-2 max-w-5xl mt-3">
             {skills.map((item: any) => (
               <div
-                className="p-2 bg-white/10 text-white text-[12px] rounded-lg"
+                className="p-2 bg-white/10 text-white text-[12px] rounded-lg flex items-center justify-between gap-2"
                 key={item.id}
               >
+                <Image
+                  src={item.icon}
+                  alt=""
+                  height={14}
+                  width={14}
+                  className="object-cover rounded-full"
+                />
                 {item.name}
               </div>
             ))}

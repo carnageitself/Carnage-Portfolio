@@ -216,70 +216,6 @@ export const testimonials = [
   },
 ];
 
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
-
-export const workExperience = [
-  {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
-  },
-  {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
-];
-
 export const socialMedia = [
   {
     id: 1,
@@ -385,5 +321,130 @@ export const technologies = [
   {
     name: "bootstrap",
     icon: bootstrap,
+  },
+];
+
+export const Frontend = [
+  {
+    id: "1",
+    name: "Typescript",
+    icon: typescript,
+  },
+  {
+    id: "2",
+    name: "Javascript",
+    icon: typescript,
+  },
+  {
+    id: "3",
+    name: "SQL",
+    icon: typescript,
+  },
+  {
+    id: "4",
+    name: "Solidity",
+    icon: solidity,
+  },
+];
+
+export const Backend = [
+  {
+    id: "1",
+    name: "Next JS",
+    icon: nextjs,
+  },
+  {
+    id: "2",
+    name: "React JS",
+    icon: reactjs,
+  },
+  {
+    id: "3",
+    name: "Tailwind CSS",
+    icon: tailwind,
+  },
+  {
+    id: "4",
+    name: "Bootstrap",
+    icon: bootstrap,
+  },
+  {
+    id: "5",
+    name: "Vite JS",
+    icon: vite,
+  },
+  {
+    id: "6",
+    name: "Framer Motion",
+    icon: typescript,
+  },
+];
+
+export const Data = [
+  {
+    id: "1",
+    name: "Foundation of Data Analytics",
+    icon: typescript,
+  },
+  {
+    id: "2",
+    name: "Data Management for Analytics",
+    icon: typescript,
+  },
+  {
+    id: "3",
+    name: "Data Mining",
+    icon: typescript,
+  },
+  {
+    id: "4",
+    name: "Computational Visualisation for Analytics",
+    icon: typescript,
+  },
+];
+
+export const Softwares = [
+  {
+    id: "1",
+    name: "Foundation of Data Analytics",
+    icon: typescript,
+  },
+  {
+    id: "2",
+    name: "Data Management for Analytics",
+    icon: typescript,
+  },
+  {
+    id: "3",
+    name: "Data Mining",
+    icon: typescript,
+  },
+  {
+    id: "4",
+    name: "Computational Visualisation for Analytics",
+    icon: typescript,
+  },
+];
+
+export const ProgrammingLanguage = [
+  {
+    id: "1",
+    name: "Foundation of Data Analytics",
+    icon: typescript,
+  },
+  {
+    id: "2",
+    name: "Data Management for Analytics",
+    icon: typescript,
+  },
+  {
+    id: "3",
+    name: "Data Mining",
+    icon: typescript,
+  },
+  {
+    id: "4",
+    name: "Computational Visualisation for Analytics",
+    icon: typescript,
   },
 ];

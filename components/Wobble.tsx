@@ -67,6 +67,17 @@ export function Wobble() {
 
   const [copied, setCopied] = useState(false);
 
+  const handleDownloadResume = () => {
+    const resumeUrl = "/Resume.pdf"; // Publicly available URL
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.setAttribute("download", "Resume.pdf"); // Suggested filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setCopied(true);
+  };
+
   const defaultOptions = {
     loop: copied,
     autoplay: copied,
@@ -147,7 +158,7 @@ export function Wobble() {
                 title={copied ? "Resume Downloaded!" : "My Resume!"}
                 icon={<IoCopyOutline />}
                 position="left"
-                handleClick={handleCopy}
+                handleClick={handleDownloadResume}
                 otherClasses="!bg-[#161A31]"
               />
             </div>
