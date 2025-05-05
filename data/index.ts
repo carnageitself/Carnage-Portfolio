@@ -249,202 +249,272 @@ export const socialMedia = [
   },
 ];
 
-export const technologies = [
+export const Visualization = [
   {
-    name: "typeScript",
+    id: "1",
+    name: "Power BI",
     icon: typescript,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    id: "2",
+    name: "KPI Dashboards",
+    icon: typescript,
   },
   {
-    name: "Express JS",
-    icon: express,
+    id: "3",
+    name: "Matplotlib",
+    icon: typescript,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    id: "3",
+    name: "Plotly",
+    icon: typescript,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
-  },
-
-  {
-    name: "Next JS",
-    icon: nextjs,
+    id: "4",
+    name: "Seaborn",
+    icon: typescript,
   },
   {
-    name: "firebase",
-    icon: firebase,
-  },
-
-  {
-    name: "Solidity",
+    id: "5",
+    name: "Altair",
     icon: solidity,
   },
-
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  // {
-  //   name: "git",
-  //   icon: git,
-  // },
-
-  {
-    name: "Power Bi",
-    icon: powerbi,
+    id: "6",
+    name: "Plotly Dash",
+    icon: typescript,
   },
   {
+    id: "7",
     name: "Tableau",
-    icon: tableau,
-  },
-  {
-    name: "My SQL",
-    icon: mysql,
-  },
-  {
-    name: "python",
-    icon: python,
-  },
-  {
-    name: "Vite JS",
-    icon: vite,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "bootstrap",
-    icon: bootstrap,
+    icon: typescript,
   },
 ];
 
-export const Frontend = [
+export const CloudPlatforms = [
   {
     id: "1",
-    name: "Typescript",
-    icon: typescript,
-  },
-  {
-    id: "2",
-    name: "Javascript",
-    icon: typescript,
-  },
-  {
-    id: "3",
-    name: "SQL",
-    icon: typescript,
-  },
-  {
-    id: "4",
-    name: "Solidity",
-    icon: solidity,
-  },
-];
-
-export const Backend = [
-  {
-    id: "1",
-    name: "Next JS",
+    name: "Amazon Web Services (AWS)",
     icon: nextjs,
   },
   {
     id: "2",
-    name: "React JS",
+    name: "AWS S3",
     icon: reactjs,
   },
   {
     id: "3",
-    name: "Tailwind CSS",
+    name: "AWS Glue",
     icon: tailwind,
   },
   {
     id: "4",
-    name: "Bootstrap",
+    name: "AWS Athena",
     icon: bootstrap,
   },
   {
     id: "5",
-    name: "Vite JS",
+    name: "AWS Quicksight",
     icon: vite,
   },
   {
     id: "6",
-    name: "Framer Motion",
+    name: "Firebase",
+    icon: typescript,
+  },
+  {
+    id: "7",
+    name: "MongoDB Atlas",
+    icon: typescript,
+  },
+  {
+    id: "8",
+    name: "MongoDB Compass",
+    icon: typescript,
+  },
+  {
+    id: "9",
+    name: "Ethereum Blockchain",
     icon: typescript,
   },
 ];
 
-export const Data = [
+export const ProgrammingAndTools = [
   {
     id: "1",
-    name: "Foundation of Data Analytics",
+    name: "Python",
     icon: typescript,
   },
   {
     id: "2",
-    name: "Data Management for Analytics",
+    name: "Pandas",
     icon: typescript,
   },
   {
     id: "3",
-    name: "Data Mining",
+    name: "NumPy",
     icon: typescript,
   },
   {
     id: "4",
-    name: "Computational Visualisation for Analytics",
+    name: "SciKit Learn",
+    icon: typescript,
+  },
+  {
+    id: "5",
+    name: "SQL",
+    icon: typescript,
+  },
+  {
+    id: "6",
+    name: "NoSQL",
+    icon: typescript,
+  },
+  {
+    id: "6",
+    name: "JavaScript",
+    icon: typescript,
+  },
+  {
+    id: "7",
+    name: "TypeScript",
+    icon: typescript,
+  },
+  {
+    id: "8",
+    name: "Solidity",
+    icon: typescript,
+  },
+  {
+    id: "9",
+    name: "MySQL",
+    icon: typescript,
+  },
+  {
+    id: "10",
+    name: "Microsoft SQL server",
+    icon: typescript,
+  },
+  {
+    id: "11",
+    name: "Microsoft Excel",
+    icon: typescript,
+  },
+  {
+    id: "12",
+    name: "Git/Github",
+    icon: typescript,
+  },
+  {
+    id: "13",
+    name: "Figma",
     icon: typescript,
   },
 ];
 
-export const Softwares = [
+export const WebDevelopment = [
   {
     id: "1",
-    name: "Foundation of Data Analytics",
+    name: "React JS",
     icon: typescript,
   },
   {
     id: "2",
-    name: "Data Management for Analytics",
+    name: "Node JS",
     icon: typescript,
   },
   {
     id: "3",
-    name: "Data Mining",
+    name: "Express JS",
     icon: typescript,
   },
   {
     id: "4",
-    name: "Computational Visualisation for Analytics",
+    name: "Vite JS",
+    icon: typescript,
+  },
+  {
+    id: "5",
+    name: "Tailwind Css",
+    icon: typescript,
+  },
+  {
+    id: "6",
+    name: "Three JS",
+    icon: typescript,
+  },
+  {
+    id: "7",
+    name: "D3 JS",
+    icon: typescript,
+  },
+  {
+    id: "8",
+    name: "Docker",
+    icon: typescript,
+  },
+  {
+    id: "9",
+    name: "Next JS",
+    icon: typescript,
+  },
+  {
+    id: "10",
+    name: "Metamask",
+    icon: typescript,
+  },
+  {
+    id: "11",
+    name: "Hardhat",
+    icon: typescript,
+  },
+  {
+    id: "12",
+    name: "Redux",
     icon: typescript,
   },
 ];
 
-export const ProgrammingLanguage = [
+export const DataModeling = [
   {
     id: "1",
-    name: "Foundation of Data Analytics",
+    name: "Predicitive Modelling",
     icon: typescript,
   },
   {
     id: "2",
-    name: "Data Management for Analytics",
+    name: "Time Series Analysis",
     icon: typescript,
   },
   {
     id: "3",
-    name: "Data Mining",
+    name: "Machine Learning",
     icon: typescript,
   },
   {
     id: "4",
-    name: "Computational Visualisation for Analytics",
+    name: "Hypothesis Testing",
+    icon: typescript,
+  },
+  {
+    id: "5",
+    name: "Statistical Analysis",
+    icon: typescript,
+  },
+  {
+    id: "6",
+    name: "Exploratary Data Analysis (EDA)",
+    icon: typescript,
+  },
+  {
+    id: "7",
+    name: "Explore Transform Load Pipelines (ETL)",
+    icon: typescript,
+  },
+  {
+    id: "8",
+    name: "Neural Networks",
     icon: typescript,
   },
 ];

@@ -45,16 +45,21 @@ const content = [
     description: (
       <div className="">
         <li>
-          Integrated software solutions to link students with expert teachers
-          and top ranked students.
+          Led a technical team of 5 engineers, overseeing the design and
+          development of a high-performance website that facilitated seamless
+          student-teacher connectivity, improving student engagement by 20%
         </li>
         <li>
-          Designed and developed a user-friendly website using modern web
-          frameworks such as Next.JS and MERN Stack.
+          Engineered the platform using the MERN stack, integrating Next.js,
+          Tailwind CSS, and Figma for a fully responsive, SEO friendly UI/UX
         </li>
         <li>
-          Enhanced Sartha Education&apos;s online presence by 40%, broadening
-          audience reach.
+          Automated backend workflows using NoSQL (Firebase & MongoDB), reducing
+          manual data entry by 90%
+        </li>
+        <li>
+          Collaborated with key stakeholders, aligning technical strategies with
+          business goals, resulting in a 30% increase in operational efficiency
         </li>
       </div>
     ),
@@ -76,13 +81,24 @@ const content = [
     description: (
       <div className="">
         <li>
-          Collaborated with the college technical teams to identify and address
-          software development needs, contributing to infrastructure
-          improvements and enhancing project outcomes by 30%.
+          Developed a college prediction model using statistical analysis, which
+          was integrated into the university admission portal, boosting
+          performance by 40%
         </li>
         <li>
-          Advised students on coding skills and innovative technologies like AI,
-          DS, and AIML, preparing them for competitive careers.
+          Conceptualized and built a CRM system leveraging the MERN stack,
+          enabling university officials to track and resolve student inquiries
+          65% faster, enhancing departmental responsiveness and student
+          satisfaction
+        </li>
+        <li>
+          Integrated Firebase to execute NoSQL queries and streamlined database
+          management, simplifying user data handling and reducing administrative
+          overhead
+        </li>
+        <li>
+          Coordinated 20+ tech events and collaborated across departments to
+          drive student engagement and data adoption
         </li>
       </div>
     ),

@@ -1,6 +1,5 @@
 import React from "react";
 import BallCanvas from "./ui/Balls";
-import { technologies } from "@/data/index";
 import { Glowing } from "./Glowing";
 import { ColourfulText } from "./ui/ColorfulText";
 

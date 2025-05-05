@@ -9,6 +9,7 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { Techstack } from "@/components/TechStack";
 import { Wobble } from "@/components/Wobble";
 import HeroParallax from "@/components/ui/Parallax";
+import { Testimonials } from "@/components/Testimonials";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
         {/* <RecentProjects /> */}
         <Experience />
         <Techstack />
-
+        <Testimonials />
         {/* <Approach /> */}
         <Footer />
       </div>

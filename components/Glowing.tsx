@@ -4,12 +4,11 @@ import { Box, Lock, Search, Settings, Sparkles } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/GlowingEffect";
 import Image from "next/image";
 import {
-  Backend,
-  Data,
-  Frontend,
-  ProgrammingLanguage,
-  projects,
-  Softwares,
+  CloudPlatforms,
+  DataModeling,
+  ProgrammingAndTools,
+  Visualization,
+  WebDevelopment,
 } from "@/data";
 
 export function Glowing() {
@@ -18,41 +17,41 @@ export function Glowing() {
       <GridItem
         area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
         icon={<Box className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="Frontend Development"
+        title="Cloud Platforms"
         description="Running out of copy so I'll write anything."
-        skills={Frontend}
+        skills={CloudPlatforms}
       />
 
       <GridItem
         area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
         icon={<Settings className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="Backend Development"
+        title="Visualization Tools"
         description="Yes, it's true. I'm not even kidding. Ask my mom if you don't believe me."
-        skills={Backend}
+        skills={Visualization}
       />
 
       <GridItem
         area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
         icon={<Lock className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="Programming Languages"
+        title="Data Modelling"
         description="It's the best money you'll ever spend"
-        skills={ProgrammingLanguage}
+        skills={DataModeling}
       />
 
       <GridItem
         area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
         icon={<Sparkles className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="Data Analysis Tools"
+        title="Programming Languages & Tools"
         description="I'm not even kidding. Ask my mom if you don't believe me."
-        skills={Data}
+        skills={ProgrammingAndTools}
       />
 
       <GridItem
         area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
         icon={<Search className="h-4 w-4 text-black dark:text-neutral-400" />}
-        title="Softwares & Technologies"
+        title="Web Development"
         description="I'm writing the code as I record this, no shit."
-        skills={Softwares}
+        skills={WebDevelopment}
       />
     </ul>
   );
@@ -95,13 +94,13 @@ const GridItem = ({ area, icon, title, skills }: GridItemProps) => {
                 className="p-2 bg-white/10 text-white text-[12px] rounded-lg flex items-center justify-between gap-2"
                 key={item.id}
               >
-                <Image
+                {/* <Image
                   src={item.icon}
                   alt=""
                   height={14}
                   width={14}
                   className="object-cover rounded-full"
-                />
+                /> */}
                 {item.name}
               </div>
             ))}

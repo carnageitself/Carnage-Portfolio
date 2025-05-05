@@ -1,3 +1,4 @@
+"use client";
 import { FaLocationArrow } from "react-icons/fa6";
 
 import MagicButton from "./MagicButton";
@@ -7,7 +8,12 @@ import { FlipWords } from "./ui/FlipWords";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
-  const words = ["Data Analyst", "Software Engineer"];
+  const words = [
+    "Data Analyst",
+    "Data Scientist",
+    "Data Engineer",
+    "Software Engineer",
+  ];
 
   return (
     <div className="pb-20 pt-36">
