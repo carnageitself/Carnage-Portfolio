@@ -68,10 +68,10 @@ export function Wobble() {
   const [copied, setCopied] = useState(false);
 
   const handleDownloadResume = () => {
-    const resumeUrl = "/Resume.pdf"; // Publicly available URL
+    const resumeUrl = "/Yash%20Resume.pdf"; // or "/Yash%20Resume.pdf" if you keep the space
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.setAttribute("download", "Resume.pdf"); // Suggested filename
+    link.setAttribute("download", "Yash%20Resume.pdf"); // filename to save as
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -159,7 +159,7 @@ export function Wobble() {
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleDownloadResume}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="!bg-[#161A31] "
               />
             </div>
           </BackgroundGradientAnimation>

@@ -61,9 +61,9 @@ export function Testimonials() {
       </h1>
       <div className="mt-20">
         <DraggableCardContainer className="relative flex min-h-[80vh] w-full items-center justify-center overflow-clip">
-          <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
+          {/* <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
             If its your first day at Fight Club, you have to fight.
-          </p>
+          </p> */}
           {items.map((item) => (
             <DraggableCardBody className={item.className} key={item.id}>
               <img
